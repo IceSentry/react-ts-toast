@@ -1,14 +1,8 @@
-# react-ts-toast
+import * as React from 'react'
+import { ToastProvider } from 'lib/ToastProvider'
+import useToast from 'lib/useToast'
+import { useState, FC } from 'react'
 
-This is a simple react toast notifications library made with typescript.
-
-To use it, wrap your App in a `<ToastProvider>`.
-
-The `useToast()` hook gives `addToast()` and `clearAll()` functions.
-
-## Example usage:
-
-```tsx
 const ExampleApp: FC = () => {
   const { addToast, clearAll } = useToast()
   const [text, setText] = useState('test')
@@ -31,4 +25,3 @@ export const App = () => {
     </div>
   )
 }
-```
